@@ -36,11 +36,11 @@ export default function SearchPage() {
     if (sort === 'reviews')  shops.sort((a, b) => b.reviewCount - a.reviewCount);
     // promoted always first
     shops.sort((a, b) => {
-      const rank = { sponsored: 0, basic: 1, free: 2 };
+      const rank = { sponsored: 0, basic: , free: 2 };
       return rank[a.plan] - rank[b.plan];
     });
     return shops;
-  }, [activeCat, sort, query, petFilter]);
+  }, [activeCat, sort, query]);
 
   return (
     <main className={styles.page}>
