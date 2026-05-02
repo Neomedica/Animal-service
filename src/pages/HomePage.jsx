@@ -72,7 +72,7 @@ export default function HomePage() {
           <div className={styles.listingsGrid}>{shops.map(shop=><ShopCard key={shop.id} shop={shop}/>)}</div>
           <div className={styles.adsSlot}>
             <div><strong>🚀 ต้องการให้ร้านของคุณอยู่อันดับต้น?</strong><p>เปิดใช้งาน Boost หรือ Sponsored — เริ่มต้นเพียง ฿299/เดือน</p></div>
-            <button className={styles.btnAds} onClick={()=>navigate(`/adopt`)}
+            <button className={styles.btnAds} onClick={() => navigate(`/adopt`)}>ดูแพ็กเกจ →</button>
           </div>
         </div>
       </section>
