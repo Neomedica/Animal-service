@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { CATEGORIES } from '../data/categories';
 import { SHOPS } from '../data/shops';
@@ -7,7 +7,7 @@ import styles from './HomePage.module.css';
 
 export default function HomePage() {
   const navigate = useNavigate();
-  const searchRef = useRef(null);
+  
 
   return (
     <main>
