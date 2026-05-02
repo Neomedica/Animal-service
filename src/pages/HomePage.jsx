@@ -72,7 +72,7 @@ export default function HomePage() {
           <div className={styles.listingsGrid}>{shops.map(shop=><ShopCard key={shop.id} shop={shop}/>)}</div>
           <div className={styles.adsSlot}>
             <div><strong>🚀 ต้องการให้ร้านของคุณอยู่อันดับต้น?</strong><p>เปิดใช้งาน Boost หรือ Sponsored — เริ่มต้นเพียง ฿299/เดือน</p></div>
-            <button className={styles.btnAds} onClick={()=>navigate('/pricing')}>ดูแพ็กเกจ →</button>
+            <button className={styles.btnAds} onClick={()=>navigate(`/adopt`)}
           </div>
         </div>
       </section>
@@ -158,7 +158,7 @@ export default function HomePage() {
                   <div className={styles.sponsorAddText}>เป็นสปอนเซอร์</div>
                 </div>
               </div>
-              <button className={styles.sponsorCta} onClick={()=>navigate('/contact')}>ติดต่อเป็นพันธมิตร →</button>
+              <button className={styles.sponsorCta} onClick={()=>navigate('/sponsor')}>ติดต่อเป็นพันธมิตร →</button>
             </div>
           </div>
         </div>
