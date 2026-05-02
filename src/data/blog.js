@@ -8,8 +8,23 @@ export const BLOG_POSTS = [
 ];
 
 export const FOUNDERS = [
-  { id:1, name:'ลิจู', role:'CEO & Co-founder', bio:'เจ้าของแมว 2 ตัว ที่หาคลินิกดีๆ ในเชียงใหม่ไม่ได้ จนต้องสร้าง PawPal ขึ้นมาเอง', emoji:'😺', bg:'#FFF0A0', social:'@lijue' },
-  { id:2, name:'ทีมงาน A', role:'CTO & Co-founder', bio:'นักพัฒนาซอฟต์แวร์ที่รักหมามากกว่าโค้ด ดูแลระบบทั้งหมดของ PawPal', emoji:'🐶', bg:'#D8F5FF', social:'@dev_a' },
-  { id:3, name:'ทีมงาน B', role:'CMO & Co-founder', bio:'Marketing guru ที่เชื่อว่าทุกสัตว์เลี้ยงสมควรได้รับการดูแลที่ดีที่สุด', emoji:'🐰', bg:'#E8FFE8', social:'@mkt_b' },
-  { id:4, name:'ทีมงาน C', role:'COO & Co-founder', bio:'ผู้ดูแลการดำเนินงานที่ทำให้ทุกอย่างในทีมไหลลื่น เจ้าของนกแก้ว 3 ตัว', emoji:'🦜', bg:'#F0E8FF', social:'@ops_c' },
+  { id:1, name:'ลิจู', role:'CEO & Co-founder', bio:'เจ้าของแมว 2 ตัว ที่หาคลินิกดีๆ ในเชียงใหม่ไม่ได้ จนต้องสร้าง PawPal ขึ้นมาเอง', emoji:'😺', bg:'#FFF0A0', accent:'#FFD94D', badge:'👑', social:'@lijue' },
+  { id:2, name:'ทีมงาน A', role:'CTO & Co-founder', bio:'นักพัฒนาซอฟต์แวร์ที่รักหมามากกว่าโค้ด ดูแลระบบทั้งหมดของ PawPal', emoji:'🐶', bg:'#D8F5FF', accent:'#B8E4F9', badge:'💻', social:'@dev_a' },
+  { id:3, name:'ทีมงาน B', role:'CMO & Co-founder', bio:'Marketing guru ที่เชื่อว่าทุกสัตว์เลี้ยงสมควรได้รับการดูแลที่ดีที่สุด', emoji:'🐰', bg:'#E8FFE8', accent:'#C0EEC0', badge:'📣', social:'@mkt_b' },
+  { id:4, name:'ทีมงาน C', role:'COO & Co-founder', bio:'ผู้ดูแลการดำเนินงานที่ทำให้ทุกอย่างในทีมไหลลื่น เจ้าของนกแก้ว 3 ตัว', emoji:'🦜', bg:'#F0E8FF', accent:'#D8C8FF', badge:'⚙️', social:'@ops_c' },
+];
+
+export const PETS_FOR_ADOPTION = [
+  { id:1, name:'มะลิ', type:'แมวเมีย', age:'1 ปี', emoji:'🐱', bg:'#FFF0A0', badge:'ฉีดวัคซีนแล้ว' },
+  { id:2, name:'ดาว', type:'สุนัขผสม', age:'2 ปี', emoji:'🐶', bg:'#D8F5FF', badge:'ทำหมันแล้ว' },
+  { id:3, name:'บัตเตอร์', type:'กระต่าย', age:'8 เดือน', emoji:'🐰', bg:'#E8FFE8', badge:'สุขภาพดี' },
+  { id:4, name:'โมจิ', type:'แมวเมีย', age:'3 ปี', emoji:'🐱', bg:'#FFE8F5', badge:'ฉีดวัคซีนแล้ว' },
+  { id:5, name:'โกโก้', type:'สุนัขเล็ก', age:'6 เดือน', emoji:'🐶', bg:'#FFF9E0', badge:'ทำหมันแล้ว' },
+  { id:6, name:'ซาชิ', type:'แมวชาย', age:'2 ปี', emoji:'🐱', bg:'#E8F8FF', badge:'สุขภาพดี' },
+];
+
+export const SPONSORS = [
+  { name:'VetCare CM', emoji:'🏥', bg:'#FFF9E8' },
+  { name:'PetFood Pro', emoji:'🍖', bg:'#E8F8FF' },
+  { name:'FluffyGroom', emoji:'✂️', bg:'#F0FFE8' },
 ];
