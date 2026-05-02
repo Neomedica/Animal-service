@@ -1,0 +1,71 @@
+.page {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 24px;
+  padding: 32px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: calc(100vh - 70px);
+}
+
+.sidebar {
+  position: sticky;
+  top: 86px;
+  height: fit-content;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1.5px solid var(--border-light);
+  border-radius: var(--radius-md);
+  font-size: 14px;
+  background: white;
+  margin-bottom: 20px;
+  transition: border-color 0.2s;
+}
+
+.searchInput:focus { border-color: var(--blue-deep); outline: none; }
+
+.filterGroup { margin-bottom: 24px; }
+.filterLabel { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--text-mid); margin-bottom: 10px; }
+
+.catItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 12px;
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  color: var(--text-mid);
+  cursor: pointer;
+  transition: all 0.15s;
+  margin-bottom: 2px;
+}
+
+.catItem:hover { background: #EEF8FF; color: var(--blue-deep); }
+.catActive    { background: #EEF8FF; color: var(--blue-deep); font-weight: 700; }
+.catBadge { margin-left: auto; background: var(--blue); color: var(--blue-deeper); border-radius: 50px; padding: 2px 8px; font-size: 10px; font-weight: 700; }
+
+.results {}
+
+.resultsHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.resultsCount { font-size: 14px; color: var(--text-mid); }
+.resultsCount strong { color: var(--text-dark); }
+
+.sortRow { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--text-mid); }
+.sortSelect { border: 1.5px solid var(--border-light); border-radius: 8px; padding: 7px 10px; font-size: 13px; color: var(--text-dark); background: white; cursor: pointer; }
+
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 18px; }
+.empty { grid-column: 1/-1; text-align: center; padding: 60px 20px; color: var(--text-light); font-size: 15px; }
+
+@media (max-width: 768px) {
+  .page { grid-template-columns: 1fr; padding: 20px; }
+  .sidebar { position: static; }
+}

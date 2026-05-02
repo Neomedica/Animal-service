@@ -1,0 +1,33 @@
+:root {
+  /* Brand colors */
+  --blue: #B8E4F9;
+  --blue-dark: #6BC5ED;
+  --blue-deep: #3AA8D8;
+  --blue-deeper: #2990C0;
+  --yellow: #FFF0A0;
+  --yellow-dark: #FFD94D;
+  --yellow-deep: #F5C200;
+  --green-light: #D4F5E8;
+  --green-mid: #26C6A2;
+  --green-deep: #0A6040;
+
+  /* Neutrals */
+  --text-dark: #2A2A3A;
+  --text-mid: #5A5A7A;
+  --text-light: #9090B0;
+  --surface: #F8FBFF;
+  --white: #FFFFFF;
+  --border-light: rgba(184, 228, 249, 0.5);
+  --border-mid: rgba(107, 197, 237, 0.5);
+
+  /* Typography */
+  --font-display: 'Nunito', sans-serif;
+  --font-body: 'Sora', sans-serif;
+
+  /* Spacing */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-xl: 24px;
+  --radius-pill: 999px;
+}
