@@ -1,0 +1,23 @@
+.box{background:white;border-radius:20px;border:1.5px solid rgba(184,228,249,0.5);padding:24px;}
+.label{font-size:13px;font-weight:700;color:var(--text-dark);margin-bottom:16px;}
+.inputRow{display:flex;gap:10px;margin-bottom:20px;align-items:flex-end;}
+.myAv{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#B8E4F9,#FFD94D);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;}
+.inputWrap{flex:1;}
+.textarea{width:100%;border:1.5px solid rgba(184,228,249,0.8);border-radius:12px;padding:10px 14px;font-size:13px;font-family:var(--font-body);color:var(--text-dark);resize:none;line-height:1.5;transition:border .15s;}
+.textarea:focus{border-color:var(--blue-deep);outline:none;}
+.inputFooter{display:flex;align-items:center;justify-content:space-between;margin-top:6px;}
+.quickEmoji{display:flex;gap:4px;}
+.ep{background:none;border:none;font-size:16px;cursor:pointer;padding:2px;opacity:0.65;transition:opacity .15s;}
+.ep:hover{opacity:1;}
+.sendBtn{background:var(--blue-deep);color:white;border:none;border-radius:50px;padding:8px 18px;font-size:13px;font-weight:700;cursor:pointer;font-family:var(--font-body);}
+.sendBtn:disabled{background:#B8E4F9;color:#6BC5ED;cursor:not-allowed;}
+.list{display:flex;flex-direction:column;gap:12px;}
+.item{display:flex;gap:10px;align-items:flex-start;}
+.av{width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;}
+.body{flex:1;background:var(--surface);border-radius:12px;padding:10px 14px;border:1px solid rgba(184,228,249,0.4);}
+.name{font-size:12px;font-weight:700;color:var(--blue-deep);margin-bottom:3px;display:flex;align-items:center;gap:6px;}
+.newBadge{background:var(--yellow-dark);color:#5A3C00;font-size:9px;font-weight:800;padding:1px 6px;border-radius:50px;}
+.text{font-size:13px;color:var(--text-dark);line-height:1.6;}
+.meta{font-size:11px;color:var(--text-light);margin-top:5px;}
+.likeBtn{background:none;border:none;cursor:pointer;font-size:11px;color:var(--text-light);padding:0;font-family:var(--font-body);}
+.liked{color:#E24B4A;}

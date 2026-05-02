@@ -1,0 +1,12 @@
+.box{background:white;border-radius:20px;border:1.5px solid rgba(184,228,249,0.5);padding:24px;margin-bottom:20px;}
+.label{font-size:13px;font-weight:700;color:var(--text-dark);margin-bottom:16px;}
+.row{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:20px;}
+.btn{display:flex;flex-direction:column;align-items:center;gap:4px;background:var(--surface);border:1.5px solid rgba(184,228,249,0.6);border-radius:14px;padding:10px 14px;cursor:pointer;font-family:var(--font-body);min-width:64px;transition:all .15s;}
+.btn:hover{transform:scale(1.08);border-color:var(--blue-deep);background:#EEF8FF;}
+.reacted{border-color:var(--blue-deep);background:#EEF8FF;}
+.emoji{font-size:26px;line-height:1;display:block;}
+.count{font-size:12px;font-weight:700;color:var(--text-mid);}
+.name{font-size:10px;color:var(--text-light);}
+.totalBar{display:flex;align-items:center;gap:8px;padding-top:16px;border-top:1px solid rgba(184,228,249,0.4);}
+.totalNum{font-size:20px;font-weight:800;color:var(--blue-deep);font-family:var(--font-display);}
+.totalLabel{font-size:13px;color:var(--text-light);}
