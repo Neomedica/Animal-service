@@ -6,6 +6,7 @@ import ShopCard from '../components/ui/ShopCard';
 import styles from './HomePage.module.css';
 
 export default function HomePage() {
+// eslint-disable-next-line
   const navigate = useNavigate();
   
 

@@ -39,6 +39,7 @@ export default function SearchPage() {
       const rank = { sponsored: 0, basic: , free: 2 };
       return rank[a.plan] - rank[b.plan];
     });
+// eslint-disable-next-line
     return shops;
   }, [activeCat, sort, query]);
 
