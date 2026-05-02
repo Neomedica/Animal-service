@@ -8,13 +8,15 @@ import SearchPage from './pages/SearchPage';
 import ShopDetailPage from './pages/ShopDetailPage';
 import RegisterPage from './pages/RegisterPage';
 import BlogPage from './pages/BlogPage';
+import AdoptionPage from './pages/AdoptionPage';
+import SponsorPage from './pages/SponsorPage';
 
 function NotFound() {
   return (
-    <div style={{ textAlign:'center', padding:'100px 20px', color:'var(--text-light)' }}>
-      <div style={{ fontSize:'48px', marginBottom:'16px' }}>🐾</div>
-      <h2 style={{ fontFamily:'var(--font-display)', fontSize:'24px', color:'var(--text-dark)', marginBottom:'8px' }}>ไม่พบหน้าที่ต้องการ</h2>
-      <a href="/" style={{ color:'var(--blue-deep)', fontSize:'14px' }}>กลับหน้าหลัก</a>
+    <div style={{textAlign:'center',padding:'100px 20px',color:'var(--text-light)'}}>
+      <div style={{fontSize:'48px',marginBottom:'16px'}}>🐾</div>
+      <h2 style={{fontFamily:'var(--font-display)',fontSize:'24px',color:'var(--text-dark)',marginBottom:'8px'}}>ไม่พบหน้าที่ต้องการ</h2>
+      <a href="/" style={{color:'var(--blue-deep)',fontSize:'14px'}}>กลับหน้าหลัก</a>
     </div>
   );
 }
@@ -29,6 +31,8 @@ export default function App() {
         <Route path="/shop/:id" element={<ShopDetailPage />} />
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/blog" element={<BlogPage />} />
+        <Route path="/adopt" element={<AdoptionPage />} />
+        <Route path="/sponsor" element={<SponsorPage />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
