@@ -11,7 +11,6 @@ import styles from './HomePage.module.css';
 export default function HomePage() {
   const navigate = useNavigate();
   const { shops } = useShops();
-
   return (
     <main>
       <section className={styles.hero}>
@@ -72,7 +71,7 @@ export default function HomePage() {
           <div className={styles.listingsGrid}>{shops.map(shop=><ShopCard key={shop.id} shop={shop}/>)}</div>
           <div className={styles.adsSlot}>
             <div><strong>🚀 ต้องการให้ร้านของคุณอยู่อันดับต้น?</strong><p>เปิดใช้งาน Boost หรือ Sponsored — เริ่มต้นเพียง ฿299/เดือน</p></div>
-            <button className={styles.btnAds} onClick={() => navigate(`/adopt`)}>ดูแพ็กเกจ →</button>
+            <button className={styles.btnAds} onClick={()=>navigate('/register')}>ลงทะเบียนร้าน →</button>
           </div>
         </div>
       </section>
@@ -103,9 +102,7 @@ export default function HomePage() {
             {FOUNDERS.map(f=>(
               <div key={f.id} className={styles.founderCard}>
                 <div className={styles.founderAvatarWrap}>
-                  <div className={styles.founderAvatar} style={{background:f.bg}}>
-                    <span className={styles.founderEmoji}>{f.emoji}</span>
-                  </div>
+                  <div className={styles.founderAvatar} style={{background:f.bg}}><span className={styles.founderEmoji}>{f.emoji}</span></div>
                   <div className={styles.founderBadge}>{f.badge}</div>
                 </div>
                 <div className={styles.founderName}>{f.name}</div>
@@ -130,7 +127,7 @@ export default function HomePage() {
               </div>
               <div className={styles.petScroll}>
                 {PETS_FOR_ADOPTION.map(p=>(
-                  <div key={p.id} className={styles.petCard}>
+                  <div key={p.id} className={styles.petCard} onClick={()=>navigate('/adopt')}>
                     <div className={styles.petImg} style={{background:p.bg}}><span className={styles.petEmoji}>{p.emoji}</span></div>
                     <div className={styles.petInfo}>
                       <div className={styles.petName}>{p.name}</div>
@@ -140,9 +137,8 @@ export default function HomePage() {
                   </div>
                 ))}
               </div>
-              <button className={styles.petCta}>ดูสัตว์เลี้ยงทั้งหมด →</button>
+              <button className={styles.petCta} onClick={()=>navigate('/adopt')}>ดูสัตว์เลี้ยงทั้งหมด →</button>
             </div>
-
             <div className={styles.sponsorSection}>
               <div className={styles.sponsorTitle}>🤝 พันธมิตรและสปอนเซอร์</div>
               <div className={styles.sponsorSub}>แบรนด์ที่ร่วมสนับสนุน PawPal</div>
@@ -153,7 +149,7 @@ export default function HomePage() {
                     <div className={styles.sponsorName}>{s.name}</div>
                   </div>
                 ))}
-                <div className={styles.sponsorAdd}>
+                <div className={styles.sponsorAdd} onClick={()=>navigate('/sponsor')}>
                   <div className={styles.sponsorAddIcon}>＋</div>
                   <div className={styles.sponsorAddText}>เป็นสปอนเซอร์</div>
                 </div>
