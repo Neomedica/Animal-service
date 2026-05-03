@@ -1,7 +1,8 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { CATEGORIES } from '../data/categories';
-import { FOUNDERS, BLOG_POSTS, PETS_FOR_ADOPTION, SPONSORS } from '../data/blog';
+import { BLOG_POSTS, PETS_FOR_ADOPTION, SPONSORS } from '../data/blog';
+import { useFounders } from '../hooks/useFounders';
 import { useShops } from '../hooks/useShops';
 import ShopCard from '../components/ui/ShopCard';
 import ReactionBar from '../components/community/ReactionBar';
@@ -11,6 +12,7 @@ import styles from './HomePage.module.css';
 export default function HomePage() {
   const navigate = useNavigate();
   const { shops } = useShops();
+  const { founders } = useFounders();
   return (
     <main>
       <section className={styles.hero}>
