@@ -18,7 +18,7 @@ export default function SponsorPage() {
       <div className={styles.successCard}>
         <div className={styles.successEmoji}>🤝</div>
         <h2>ขอบคุณที่สนใจ!</h2>
-        <p>ทีมงาน PawPal จะติดต่อกลับภายใน 24 ชั่วโมง เพื่อพูดคุยรายละเอียดการเป็นพันธมิตร</p>
+        <p>ทีมงาน Furever จะติดต่อกลับภายใน 24 ชั่วโมง เพื่อพูดคุยรายละเอียดการเป็นพันธมิตร</p>
         <button className={styles.btnBack} onClick={() => navigate('/')}>กลับหน้าหลัก</button>
       </div>
     </main>
@@ -29,7 +29,7 @@ export default function SponsorPage() {
       <div className="container">
         <div className={styles.header}>
           <div className={styles.label}>พันธมิตร & สปอนเซอร์</div>
-          <h1 className={styles.title}>เติบโตไปด้วยกันกับ PawPal 🤝</h1>
+          <h1 className={styles.title}>เติบโตไปด้วยกันกับ Furever 🤝</h1>
           <p className={styles.sub}>เข้าถึงกลุ่มเจ้าของสัตว์เลี้ยงในเชียงใหม่กว่า 10,000 คน/เดือน ผ่านแพลตฟอร์มที่พวกเขาไว้ใจ</p>
         </div>
 

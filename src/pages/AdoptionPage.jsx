@@ -5,8 +5,8 @@ import styles from './AdoptionPage.module.css';
 
 const ALL_PETS = [
   ...PETS_FOR_ADOPTION,
-  { id:7, name:'ลูกู', type:'สุนัขพันธุ์เล็ก', age:'4 เดือน', emoji:'🐶', bg:'#FFF0E0', badge:'ฉีดวัคซีนแล้ว', history:'ถูกพบหน้าวัด ไม่มีเจ้าของ', contact:'LINE: @pawpal_adopt' },
-  { id:8, name:'พีช', type:'แมวเมีย', age:'1.5 ปี', emoji:'🐱', bg:'#FFE0F0', badge:'ทำหมันแล้ว', history:'เจ้าของย้ายบ้านไม่สามารถเลี้ยงต่อได้', contact:'LINE: @pawpal_adopt' },
+  { id:7, name:'ลูกู', type:'สุนัขพันธุ์เล็ก', age:'4 เดือน', emoji:'🐶', bg:'#FFF0E0', badge:'ฉีดวัคซีนแล้ว', history:'ถูกพบหน้าวัด ไม่มีเจ้าของ', contact:'LINE: @furever_adopt' },
+  { id:8, name:'พีช', type:'แมวเมีย', age:'1.5 ปี', emoji:'🐱', bg:'#FFE0F0', badge:'ทำหมันแล้ว', history:'เจ้าของย้ายบ้านไม่สามารถเลี้ยงต่อได้', contact:'LINE: @furever_adopt' },
 ];
 
 export default function AdoptionPage() {
@@ -64,7 +64,7 @@ export default function AdoptionPage() {
                 <h2 className={styles.detailName}>{selected.name}</h2>
                 <div className={styles.detailMeta}>{selected.type} · {selected.age}</div>
                 {selected.history && <p className={styles.detailHistory}>{selected.history}</p>}
-                <div className={styles.detailContact}>ติดต่อ: {selected.contact || 'LINE: @pawpal_adopt'}</div>
+                <div className={styles.detailContact}>ติดต่อ: {selected.contact || 'LINE: @furever_adopt'}</div>
 
                 <div className={styles.formSection}>
                   <div className={styles.formTitle}>กรอกข้อมูลเพื่อขอรับเลี้ยง</div>

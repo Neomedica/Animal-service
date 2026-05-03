@@ -46,7 +46,7 @@ export default function RegisterPage() {
       <div className={styles.successCard}>
         <div className={styles.successIcon}>🎉</div>
         <h2>ลงทะเบียนสำเร็จ!</h2>
-        <p>ขอบคุณที่เข้าร่วม PawPal<br />ทีมงานจะตรวจสอบและยืนยันร้านของคุณภายใน 24 ชั่วโมง</p>
+        <p>ขอบคุณที่เข้าร่วม Furever<br />ทีมงานจะตรวจสอบและยืนยันร้านของคุณภายใน 24 ชั่วโมง</p>
         <div className={styles.successInfo}>
           <div><strong>ร้านค้า:</strong> {form.shopName}</div>
           <div><strong>อีเมล:</strong> {form.ownerEmail}</div>

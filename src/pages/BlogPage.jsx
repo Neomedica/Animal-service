@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { BLOG_POSTS } from '../data/blog';
 import styles from './BlogPage.module.css';
 
-const CATS = ['ทั้งหมด','ข่าว PawPal','คลินิก','ฝากเลี้ยง','กรูมมิ่ง','อาหารสัตว์'];
+const CATS = ['ทั้งหมด','ข่าว Furever','คลินิก','ฝากเลี้ยง','กรูมมิ่ง','อาหารสัตว์'];
 
 export default function BlogPage() {
   const navigate = useNavigate();
@@ -17,7 +17,7 @@ export default function BlogPage() {
       <div className="container">
         <div className={styles.header}>
           <div className={styles.sectionLabel}>บทความและข่าวสาร</div>
-          <h1 className={styles.title}>PawPal Blog 🐾</h1>
+          <h1 className={styles.title}>Furever Blog 🐾</h1>
           <p className={styles.sub}>เคล็ดลับดูแลสัตว์เลี้ยง ข่าวสารจากทีม และอัปเดตร้านค้าใหม่ในเชียงใหม่</p>
         </div>
         {activeCat === 'ทั้งหมด' && featured && (

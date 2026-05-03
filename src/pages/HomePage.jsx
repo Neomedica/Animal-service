@@ -173,10 +173,10 @@ export default function HomePage() {
             <div className={styles.announceBox}>
               <div className={styles.announceTitle}>📢 ประกาศและข่าวด่วน</div>
               {[
-                {title:'Furever เปิดตัวแล้ว! ลงทะเบียนฟรีได้เลย', date:'2 พ.ค. 2568', isNew:true, slug:'pawpal-launch'},
+                {title:'Furever เปิดตัวแล้ว! ลงทะเบียนฟรีได้เลย', date:'2 พ.ค. 2568', isNew:true, slug:'furever-launch'},
                 {title:'ร้านใหม่ 5 ร้านน่าลองในเชียงใหม่ เดือนพ.ค.', date:'2 พ.ค. 2568', isNew:true, slug:'new-shops'},
-                {title:'อัปเดต: เพิ่มฟีเจอร์สัตว์หาบ้านแล้ว!', date:'1 พ.ค. 2568', isNew:false, slug:'pawpal-launch'},
-                {title:'ขอบคุณ 100 ร้านค้าแรกที่เข้าร่วม Furever', date:'28 เม.ย. 2568', isNew:false, slug:'pawpal-launch'},
+                {title:'อัปเดต: เพิ่มฟีเจอร์สัตว์หาบ้านแล้ว!', date:'1 พ.ค. 2568', isNew:false, slug:'furever-launch'},
+                {title:'ขอบคุณ 100 ร้านค้าแรกที่เข้าร่วม Furever', date:'28 เม.ย. 2568', isNew:false, slug:'furever-launch'},
               ].map((a,i)=>(
                 <div key={i} className={styles.announceItem} onClick={()=>navigate(`/blog/${a.slug}`)}>
                   <div className={styles.announceItemTitle}>{a.title}{a.isNew&&<span className={styles.announceNew}>ใหม่</span>}</div>

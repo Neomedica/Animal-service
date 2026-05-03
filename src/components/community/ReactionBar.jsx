@@ -26,7 +26,7 @@ export default function ReactionBar() {
     <>
       <style>{`@keyframes floatUp{0%{opacity:1;transform:translateY(0) scale(1)}100%{opacity:0;transform:translateY(-100px) scale(1.5)}}`}</style>
       <div className={styles.box}>
-        <div className={styles.label}>คุณรู้สึกยังไงกับ PawPal?</div>
+        <div className={styles.label}>คุณรู้สึกยังไงกับ Furever?</div>
         <div className={styles.row}>
           {TYPES.map(({emoji,name}) => (
             <button key={emoji} className={`${styles.btn} ${reacted[emoji]?styles.reacted:''}`} onClick={e => toggle(emoji,e)}>

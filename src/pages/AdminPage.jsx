@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styles from './AdminPage.module.css';
 
-const ADMIN_PASSWORD = 'pawpal2568';
+const ADMIN_PASSWORD = 'furever2568';
 
 const INIT_SHOPS = [
   { id:1, name:'คลินิกหมอปลา', area:'นิมมาน', type:'คลินิก', plan:'basic', status:'pending' },
@@ -24,7 +24,7 @@ const INIT_PARTNERS = [
 ];
 
 const INIT_POSTS = [
-  { id:1, title:'PawPal เปิดตัวแล้ว!', type:'ประกาศ', date:'2 พ.ค. 2568', status:'active' },
+  { id:1, title:'Furever เปิดตัวแล้ว!', type:'ประกาศ', date:'2 พ.ค. 2568', status:'active' },
   { id:2, title:'วิธีเลือกคลินิกสัตว์ที่ดี', type:'บทความ', date:'28 เม.ย. 2568', status:'active' },
   { id:3, title:'ร้านใหม่ 5 ร้านน่าลอง', type:'ประกาศ', date:'2 พ.ค. 2568', status:'active' },
 ];
@@ -66,7 +66,7 @@ export default function AdminPage() {
     <div className={styles.loginWrap}>
       <div className={styles.loginCard}>
         <div className={styles.loginEmoji}>🔐</div>
-        <h2 className={styles.loginTitle}>PawPal Admin</h2>
+        <h2 className={styles.loginTitle}>Furever Admin</h2>
         <p className={styles.loginSub}>กรอกรหัสผ่านเพื่อเข้าสู่ระบบ</p>
         <input
           type="password"

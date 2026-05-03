@@ -43,7 +43,7 @@ export default function Footer() {
       </div>
 
       <div className={styles.bottom}>
-        <span>© 2025 PawPal · สร้างด้วยความรักในเชียงใหม่ 🐾</span>
+        <span>© 2025 Furever · สร้างด้วยความรักในเชียงใหม่ 🐾</span>
         <span>เวอร์ชัน 0.1 Early Access</span>
       </div>
     </footer>
