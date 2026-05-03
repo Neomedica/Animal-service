@@ -166,20 +166,33 @@ export default function HomePage() {
             <div><div className={styles.sectionLabel}>บทความและข่าวสาร</div><h2 className={styles.sectionTitle}>PawPal Blog 🐾</h2></div>
             <button className={styles.btnViewAll} onClick={()=>navigate('/blog')}>ดูทั้งหมด →</button>
           </div>
-          <div className={styles.blogGrid}>
-            {BLOG_POSTS.slice(0,3).map(post=>(
-              <div key={post.id} className={styles.blogCard} onClick={()=>navigate(`/blog/${post.slug}`)}>
-                <div className={styles.blogCardImg} style={{background:post.categoryBg}}>
-                  <span className={styles.blogEmoji}>{post.emoji}</span>
-                  {post.hot&&<div className={styles.hotBadge}>🔥 Hot</div>}
+          <div className={styles.blogTwoCols}>
+            <div className={styles.announceBox}>
+              <div className={styles.announceTitle}>📢 ประกาศและข่าวด่วน</div>
+              {[
+                {title:'PawPal เปิดตัวแล้ว! ลงทะเบียนฟรีได้เลย', date:'2 พ.ค. 2568', isNew:true, slug:'pawpal-launch'},
+                {title:'ร้านใหม่ 5 ร้านน่าลองในเชียงใหม่ เดือนพ.ค.', date:'2 พ.ค. 2568', isNew:true, slug:'new-shops'},
+                {title:'อัปเดต: เพิ่มฟีเจอร์สัตว์หาบ้านแล้ว!', date:'1 พ.ค. 2568', isNew:false, slug:'pawpal-launch'},
+                {title:'ขอบคุณ 100 ร้านค้าแรกที่เข้าร่วม PawPal', date:'28 เม.ย. 2568', isNew:false, slug:'pawpal-launch'},
+              ].map((a,i)=>(
+                <div key={i} className={styles.announceItem} onClick={()=>navigate(`/blog/${a.slug}`)}>
+                  <div className={styles.announceItemTitle}>{a.title}{a.isNew&&<span className={styles.announceNew}>ใหม่</span>}</div>
+                  <div className={styles.announceItemDate}>{a.date}</div>
                 </div>
-                <div className={styles.blogCardBody}>
-                  <div className={styles.blogCatTag} style={{color:post.categoryColor,background:post.categoryBg}}>{post.category}</div>
-                  <div className={styles.blogCardTitle}>{post.title}</div>
-                  <div className={styles.blogCardMeta}>{post.date} · {post.readMin} นาที</div>
+              ))}
+            </div>
+            <div className={styles.blogListBox}>
+              {BLOG_POSTS.slice(0,4).map(post=>(
+                <div key={post.id} className={styles.blogListCard} onClick={()=>navigate(`/blog/${post.slug}`)}>
+                  <div className={styles.blogListImg} style={{background:post.categoryBg}}>{post.emoji}</div>
+                  <div className={styles.blogListBody}>
+                    <div className={styles.blogListCat} style={{color:post.categoryColor,background:post.categoryBg}}>{post.category}</div>
+                    <div className={styles.blogListTitle}>{post.title}</div>
+                    <div className={styles.blogListMeta}>{post.date} · {post.readMin} นาที</div>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </section>
