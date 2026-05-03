@@ -14,7 +14,7 @@ export default function Navbar() {
     <nav className={`${styles.nav} ${scrolled ? styles.scrolled : ''}`}>
       <Link to="/" className={styles.logo}>
         <div className={styles.logoPaw}>🐾</div>
-        Fur<span>ever</span>
+        <span style={{letterSpacing:'0'}}>Fur<span style={{color:'var(--blue-deep)'}}>ever</span></span>
       </Link>
       <div className={styles.links}>
         <Link to="/search">ค้นหาบริการ</Link>
