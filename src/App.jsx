@@ -10,6 +10,7 @@ import RegisterPage from './pages/RegisterPage';
 import BlogPage from './pages/BlogPage';
 import AdoptionPage from './pages/AdoptionPage';
 import SponsorPage from './pages/SponsorPage';
+import AdminPage from './pages/AdminPage';
 
 function NotFound() {
   return (
@@ -33,6 +34,7 @@ export default function App() {
         <Route path="/blog" element={<BlogPage />} />
         <Route path="/adopt" element={<AdoptionPage />} />
         <Route path="/sponsor" element={<SponsorPage />} />
+        <Route path="/admin" element={<AdminPage />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
