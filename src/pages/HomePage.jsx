@@ -2,8 +2,8 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { CATEGORIES } from '../data/categories';
 import { BLOG_POSTS, PETS_FOR_ADOPTION, SPONSORS } from '../data/blog';
-import { useFounders } from '../hooks/useFounders';
 import { useShops } from '../hooks/useShops';
+import { useFounders } from '../hooks/useFounders';
 import ShopCard from '../components/ui/ShopCard';
 import ReactionBar from '../components/community/ReactionBar';
 import CommentSection from '../components/community/CommentSection';
@@ -13,6 +13,7 @@ export default function HomePage() {
   const navigate = useNavigate();
   const { shops } = useShops();
   const { founders } = useFounders();
+
   return (
     <main>
       <section className={styles.hero}>
@@ -98,10 +99,10 @@ export default function HomePage() {
       <section className={styles.founderSection}>
         <div className="container">
           <div className={styles.sectionLabel}>ทีมผู้ก่อตั้ง</div>
-          <h2 className={styles.sectionTitle}>คนที่อยู่เบื้องหลัง PawPal 🐾</h2>
-          <p className={styles.sectionSub}>เราสร้าง PawPal เพราะเราเป็นเจ้าของสัตว์เลี้ยงที่เจอปัญหาเดียวกัน</p>
+          <h2 className={styles.sectionTitle}>คนที่อยู่เบื้องหลัง Furever 🐾</h2>
+          <p className={styles.sectionSub}>เราสร้าง Furever เพราะเราเป็นเจ้าของสัตว์เลี้ยงที่เจอปัญหาเดียวกัน</p>
           <div className={styles.founderGrid}>
-            {FOUNDERS.map(f=>(
+            {founders.map(f=>(
               <div key={f.id} className={styles.founderCard}>
                 <div className={styles.founderAvatarWrap}>
                   <div className={styles.founderAvatar} style={{background:f.bg}}><span className={styles.founderEmoji}>{f.emoji}</span></div>
@@ -143,7 +144,7 @@ export default function HomePage() {
             </div>
             <div className={styles.sponsorSection}>
               <div className={styles.sponsorTitle}>🤝 พันธมิตรและสปอนเซอร์</div>
-              <div className={styles.sponsorSub}>แบรนด์ที่ร่วมสนับสนุน PawPal</div>
+              <div className={styles.sponsorSub}>แบรนด์ที่ร่วมสนับสนุน Furever</div>
               <div className={styles.sponsorGrid}>
                 {SPONSORS.map(s=>(
                   <div key={s.name} className={styles.sponsorLogo} style={{background:s.bg}}>
@@ -165,17 +166,17 @@ export default function HomePage() {
       <section className={styles.blogSection}>
         <div className="container">
           <div className={styles.blogHeader}>
-            <div><div className={styles.sectionLabel}>บทความและข่าวสาร</div><h2 className={styles.sectionTitle}>PawPal Blog 🐾</h2></div>
+            <div><div className={styles.sectionLabel}>บทความและข่าวสาร</div><h2 className={styles.sectionTitle}>Furever Blog 🐾</h2></div>
             <button className={styles.btnViewAll} onClick={()=>navigate('/blog')}>ดูทั้งหมด →</button>
           </div>
           <div className={styles.blogTwoCols}>
             <div className={styles.announceBox}>
               <div className={styles.announceTitle}>📢 ประกาศและข่าวด่วน</div>
               {[
-                {title:'PawPal เปิดตัวแล้ว! ลงทะเบียนฟรีได้เลย', date:'2 พ.ค. 2568', isNew:true, slug:'pawpal-launch'},
+                {title:'Furever เปิดตัวแล้ว! ลงทะเบียนฟรีได้เลย', date:'2 พ.ค. 2568', isNew:true, slug:'pawpal-launch'},
                 {title:'ร้านใหม่ 5 ร้านน่าลองในเชียงใหม่ เดือนพ.ค.', date:'2 พ.ค. 2568', isNew:true, slug:'new-shops'},
                 {title:'อัปเดต: เพิ่มฟีเจอร์สัตว์หาบ้านแล้ว!', date:'1 พ.ค. 2568', isNew:false, slug:'pawpal-launch'},
-                {title:'ขอบคุณ 100 ร้านค้าแรกที่เข้าร่วม PawPal', date:'28 เม.ย. 2568', isNew:false, slug:'pawpal-launch'},
+                {title:'ขอบคุณ 100 ร้านค้าแรกที่เข้าร่วม Furever', date:'28 เม.ย. 2568', isNew:false, slug:'pawpal-launch'},
               ].map((a,i)=>(
                 <div key={i} className={styles.announceItem} onClick={()=>navigate(`/blog/${a.slug}`)}>
                   <div className={styles.announceItemTitle}>{a.title}{a.isNew&&<span className={styles.announceNew}>ใหม่</span>}</div>
@@ -201,7 +202,7 @@ export default function HomePage() {
 
       <section className={styles.reactionSection}>
         <div className="container">
-          <div className={styles.sectionLabel}>ชุมชน PawPal</div>
+          <div className={styles.sectionLabel}>ชุมชน Furever</div>
           <h2 className={styles.sectionTitle}>เจ้าของสัตว์เลี้ยงพูดถึงเรา 🐾</h2>
           <p className={styles.sectionSub}>ร่วมแสดงความรู้สึกและแชร์ประสบการณ์กับชุมชนคนรักสัตว์ในเชียงใหม่</p>
           <div className={styles.communityGrid}>
