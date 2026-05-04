@@ -196,3 +196,8 @@ export default function AdminPage() {
     </div>
   );
 }
+Founders</div><div className={styles.hint}>แก้ไขได้ใน Supabase</div></div><table className={styles.table}><thead><tr><th>ชื่อ</th><th>ตำแหน่ง</th><th>Bio</th><th>Social</th></tr></thead><tbody>{founders.map(f=>(<tr key={f.id}><td><span style={{fontSize:"20px"}}>{f.emoji}</span> <strong>{f.name}</strong></td><td>{f.role}</td><td style={{maxWidth:"200px",fontSize:"12px",color:"#7A8999"}}>{f.bio}</td><td>{f.social}</td></tr>))}</tbody></table></div>)}
+      </div>
+    </div>
+  );
+}
