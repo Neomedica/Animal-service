@@ -1,24 +1,24 @@
-import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import './styles/global.css';
-import Navbar from './components/layout/Navbar';
-import Footer from './components/layout/Footer';
-import HomePage from './pages/HomePage';
-import SearchPage from './pages/SearchPage';
-import ShopDetailPage from './pages/ShopDetailPage';
-import RegisterPage from './pages/RegisterPage';
-import BlogPage from './pages/BlogPage';
-import AdoptionPage from './pages/AdoptionPage';
-import SponsorPage from './pages/SponsorPage';
-import AdminPage from './pages/AdminPage';
-import PawStorePage from './pages/PawStorePage';
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import "./styles/global.css";
+import Navbar from "./components/layout/Navbar";
+import Footer from "./components/layout/Footer";
+import HomePage from "./pages/HomePage";
+import SearchPage from "./pages/SearchPage";
+import ShopDetailPage from "./pages/ShopDetailPage";
+import RegisterPage from "./pages/RegisterPage";
+import BlogPage from "./pages/BlogPage";
+import AdoptionPage from "./pages/AdoptionPage";
+import SponsorPage from "./pages/SponsorPage";
+import AdminPage from "./pages/AdminPage";
+import PawStorePage from "./pages/PawStorePage";
 
 function NotFound() {
   return (
-    <div style={{textAlign:'center',padding:'100px 20px',color:'var(--text-light)'}}>
-      <div style={{fontSize:'48px',marginBottom:'16px'}}>🐾</div>
-      <h2 style={{fontFamily:'var(--font-display)',fontSize:'24px',color:'var(--text-dark)',marginBottom:'8px'}}>ไม่พบหน้าที่ต้องการ</h2>
-      <a href="/" style={{color:'var(--blue-deep)',fontSize:'14px'}}>กลับหน้าหลัก</a>
+    <div style={{textAlign:"center",padding:"100px 20px",color:"var(--text-light)"}}>
+      <div style={{fontSize:"48px",marginBottom:"16px"}}>🐾</div>
+      <h2 style={{fontFamily:"var(--font-display)",fontSize:"24px",color:"var(--text-dark)",marginBottom:"8px"}}>ไม่พบหน้าที่ต้องการ</h2>
+      <a href="/" style={{color:"var(--blue-deep)",fontSize:"14px"}}>กลับหน้าหลัก</a>
     </div>
   );
 }
