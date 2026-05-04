@@ -15,7 +15,7 @@ import PawStorePage from "./pages/PawStorePage";
 
 function NotFound() {
   return (
-    <div style={{textAlign:"center",padding:"100px 20px",color:"var(--text-light)"}}>
+    <div style={{textAlign:"center",padding:"100px 20px"}}>
       <div style={{fontSize:"48px",marginBottom:"16px"}}>🐾</div>
       <h2 style={{fontFamily:"var(--font-display)",fontSize:"24px",color:"var(--text-dark)",marginBottom:"8px"}}>ไม่พบหน้าที่ต้องการ</h2>
       <a href="/" style={{color:"var(--blue-deep)",fontSize:"14px"}}>กลับหน้าหลัก</a>
