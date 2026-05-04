@@ -1,7 +1,8 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { CATEGORIES } from '../data/categories';
-import { BLOG_POSTS, PETS_FOR_ADOPTION, SPONSORS } from '../data/blog';
+import { PETS_FOR_ADOPTION, SPONSORS } from '../data/blog';
+import { useBlogPosts } from '../hooks/useBlogPosts';
 import { useShops } from '../hooks/useShops';
 import { useFounders } from '../hooks/useFounders';
 import ShopCard from '../components/ui/ShopCard';
@@ -13,6 +14,7 @@ export default function HomePage() {
   const navigate = useNavigate();
   const { shops } = useShops();
   const { founders } = useFounders();
+  const { posts: BLOG_POSTS } = useBlogPosts();
 
   return (
     <main>
