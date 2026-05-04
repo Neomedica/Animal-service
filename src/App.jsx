@@ -11,6 +11,7 @@ import BlogPage from './pages/BlogPage';
 import AdoptionPage from './pages/AdoptionPage';
 import SponsorPage from './pages/SponsorPage';
 import AdminPage from './pages/AdminPage';
+import PawStorePage from './pages/PawStorePage';
 
 function NotFound() {
   return (
@@ -34,6 +35,7 @@ export default function App() {
         <Route path="/blog" element={<BlogPage />} />
         <Route path="/adopt" element={<AdoptionPage />} />
         <Route path="/sponsor" element={<SponsorPage />} />
+        <Route path="/paw-store" element={<PawStorePage />} />
         <Route path="/admin" element={<AdminPage />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
