@@ -13,6 +13,7 @@ import styles from './HomePage.module.css';
 export default function HomePage() {
   const navigate = useNavigate();
   const { shops } = useShops();
+  const { categories } = useCategories();
   const { founders } = useFounders();
   const { posts: BLOG_POSTS } = useBlogPosts();
 
