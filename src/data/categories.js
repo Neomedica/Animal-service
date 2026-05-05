@@ -8,3 +8,11 @@ export const CATEGORIES = [
   { id: 'training',  label: 'ฝึกสุนัข / เทรนนิ่ง',    icon: '🎾', count: 0 },
   { id: 'other',     label: 'อื่นๆ',                    icon: '🐾', count: null },
 ];
+
+export const PET_TYPES = [
+  { id: 'dog', label: 'สุนัข', icon: '🐶' },
+  { id: 'cat', label: 'แมว', icon: '🐱' },
+  { id: 'rabbit', label: 'กระต่าย', icon: '🐰' },
+  { id: 'bird', label: 'นก', icon: '🐦' },
+  { id: 'other', label: 'อื่นๆ', icon: '🐾' },
+];
