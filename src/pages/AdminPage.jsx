@@ -56,9 +56,7 @@ export default function AdminPage() {
     if(ss.data){setStoreSettings(ss.data);setStoreSettingsId(ss.data.id);}
     const cm=await supabase.from("comments").select("*").order("created_at",{ascending:false});
     if(cm.data)setComments(cm.data);
-    const cm=await supabase.from("comments").select("*").order("created_at",{ascending:false});
     if(cm.data)setComments(cm.data);
-    if(arguments[7]?.data)setComments(arguments[7].data);
   }
   function toast(m){setMsg(m);setTimeout(()=>setMsg(""),3000);}
   async function uploadImg(file,onDone){
