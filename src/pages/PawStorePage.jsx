@@ -23,7 +23,7 @@ export default function PawStorePage() {
   const btnY={background:"#FFD94D",color:"#3A2800",border:"none",borderRadius:"50px",padding:"13px 28px",fontSize:"14px",fontWeight:"800",cursor:"pointer",textDecoration:"none",fontFamily:"var(--font-body)"};
   const btnW={background:"rgba(255,255,255,0.1)",color:"rgba(255,255,255,0.7)",border:"1px solid rgba(255,255,255,0.2)",borderRadius:"50px",padding:"13px 24px",fontSize:"14px",fontWeight:"600",cursor:"pointer",fontFamily:"var(--font-body)",marginLeft:"10px"};
   const grid={display:"grid",gridTemplateColumns:"repeat(auto-fill,minmax(200px,1fr))",gap:"16px",marginTop:"20px"};
-  const card={background:"white",borderRadius:"16px",border:"1.5px solid rgba(184,228,249,0.5)",overflow:"hidden",cursor:"pointer"};
+  const card={background:"white",borderRadius:"16px",border:"1.5px solid rgba(184,228,249,0.5)",overflow:"hidden"};
   if(loading)return <div style={{padding:"80px",textAlign:"center",fontSize:"48px"}}>🐾</div>;
   return(
     <main style={{padding:"0 0 80px"}}>
