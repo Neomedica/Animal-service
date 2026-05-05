@@ -21,6 +21,7 @@ export default function AdminPage() {
   const [partners,setPartners]=useState([]);
   const [founders,setFounders]=useState([]);
   const [products,setProducts]=useState([]);
+  const [comments,setComments]=useState([]);
   const [storeSettings,setStoreSettings]=useState(ESET);
   const [storeSettingsId,setStoreSettingsId]=useState(null);
   const [editB,setEditB]=useState(null);
@@ -47,11 +48,13 @@ export default function AdminPage() {
       supabase.from("founders").select("*").order("sort_order"),
       supabase.from("paw_products").select("*").order("sort_order"),
       supabase.from("paw_store_settings").select("*").limit(1).single(),
+      supabase.from("comments").select("*").order("created_at",{ascending:false}),
     ]);
     if(b.data)setPosts(b.data);if(s.data)setShops(s.data);if(p.data)setPets(p.data);
     if(pa.data)setPartners(pa.data);if(f.data)setFounders(f.data);
     if(pr.data)setProducts(pr.data);
     if(ss.data){setStoreSettings(ss.data);setStoreSettingsId(ss.data.id);}
+    if(arguments[7]?.data)setComments(arguments[7].data);
   }
   function toast(m){setMsg(m);setTimeout(()=>setMsg(""),3000);}
   async function uploadImg(file,onDone){
@@ -77,7 +80,7 @@ export default function AdminPage() {
     <div className={styles.admin}>
       <div className={styles.sidebar}>
         <div className={styles.sidebarLogo}><div className={styles.logoText}>Fur<span>ever</span></div><div className={styles.logoSub}>Admin</div></div>
-        {[{id:"blog",icon:"📝",label:"Blog"},{id:"shops",icon:"🏪",label:"ร้านค้า"},{id:"pets",icon:"🐾",label:"สัตว์หาบ้าน"},{id:"partners",icon:"🤝",label:"พาร์ทเนอร์"},{id:"store",icon:"🛍️",label:"Paw Store"},{id:"founders",icon:"👥",label:"Founders"}].map(t=>(
+        {[{id:"blog",icon:"📝",label:"Blog"},{id:"shops",icon:"🏪",label:"ร้านค้า"},{id:"pets",icon:"🐾",label:"สัตว์หาบ้าน"},{id:"partners",icon:"🤝",label:"พาร์ทเนอร์"},{id:"store",icon:"🛍️",label:"Paw Store"},{id:"founders",icon:"👥",label:"Founders"},{id:"comments",icon:"💬",label:"Comments"}].map(t=>(
           <div key={t.id} className={styles.navItem+(tab===t.id?" "+styles.navActive:"")} onClick={()=>setTab(t.id)}>
             <span>{t.icon}</span>{t.label}
           </div>
@@ -122,6 +125,15 @@ export default function AdminPage() {
               )}
               <table className={styles.table}><thead><tr><th>สินค้า</th><th>ราคา</th><th>Tag</th><th>ประเภท</th><th>ลำดับ</th><th>Action</th></tr></thead><tbody>{products.map(p=>(<tr key={p.id}><td><span style={{fontSize:"20px"}}>{p.emoji}</span> <strong>{p.name}</strong></td><td>{p.price}</td><td>{p.tag}</td><td>{p.is_quirky?"กุ๊กกิ๊ก":"ปกติ"}</td><td>{p.sort_order}</td><td><div className={styles.actions}><button className={styles.btnSm+" "+styles.btnEdit} onClick={()=>{setEditPR(p.id);setFormPR({...EPR,...p});}}>✏️</button><button className={styles.btnSm+" "+styles.btnDelete} onClick={()=>delPR(p.id)}>🗑</button></div></td></tr>))}</tbody></table>
             </div>
+          </div>
+        )}
+        {tab==="comments"&&(
+          <div className={styles.sectionCard}>
+            <div className={styles.sectionHeader}><div className={styles.pageTitle}>💬 Comments ({comments.length})</div></div>
+            <table className={styles.table}>
+              <thead><tr><th>ผู้ใช้</th><th>บทบาท</th><th>ความคิดเห็น</th><th>เวลา</th><th>Action</th></tr></thead>
+              <tbody>{comments.map(c=>(<tr key={c.id}><td><span style={{fontSize:"20px"}}>{c.user_emoji}</span> <strong>{c.user_name}</strong></td><td><span className={styles.badge}>{c.user_role||"-"}</span></td><td style={{maxWidth:"300px",fontSize:"13px"}}>{c.content}</td><td style={{fontSize:"11px",color:"#7A8999"}}>{new Date(c.created_at).toLocaleString("th-TH")}</td><td><button className={styles.btnSm+" "+styles.btnDelete} onClick={async()=>{if(!window.confirm("ลบ?"))return;await supabase.from("comments").delete().eq("id",c.id);setComments(prev=>prev.filter(x=>x.id!==c.id));}}>🗑</button></td></tr>))}</tbody>
+            </table>
           </div>
         )}
         {tab==="founders"&&(<div className={styles.sectionCard}><div className={styles.sectionHeader}><div className={styles.pageTitle}>👥 Founders</div><div className={styles.hint}>แก้ไขได้ใน Supabase</div></div><table className={styles.table}><thead><tr><th>ชื่อ</th><th>ตำแหน่ง</th><th>Bio</th><th>Social</th></tr></thead><tbody>{founders.map(f=>(<tr key={f.id}><td><span style={{fontSize:"20px"}}>{f.emoji}</span> <strong>{f.name}</strong></td><td>{f.role}</td><td style={{maxWidth:"200px",fontSize:"12px",color:"#7A8999"}}>{f.bio}</td><td>{f.social}</td></tr>))}</tbody></table></div>)}
