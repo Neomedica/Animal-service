@@ -54,6 +54,10 @@ export default function AdminPage() {
     if(pa.data)setPartners(pa.data);if(f.data)setFounders(f.data);
     if(pr.data)setProducts(pr.data);
     if(ss.data){setStoreSettings(ss.data);setStoreSettingsId(ss.data.id);}
+    const cm=await supabase.from("comments").select("*").order("created_at",{ascending:false});
+    if(cm.data)setComments(cm.data);
+    const cm=await supabase.from("comments").select("*").order("created_at",{ascending:false});
+    if(cm.data)setComments(cm.data);
     if(arguments[7]?.data)setComments(arguments[7].data);
   }
   function toast(m){setMsg(m);setTimeout(()=>setMsg(""),3000);}
