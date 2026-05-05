@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { CATEGORIES } from '../data/categories';
+import { useCategories } from '../hooks/useCategories';
 import { PETS_FOR_ADOPTION, SPONSORS } from '../data/blog';
 import { useBlogPosts } from '../hooks/useBlogPosts';
 import { useShops } from '../hooks/useShops';
