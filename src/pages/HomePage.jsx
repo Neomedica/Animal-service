@@ -36,8 +36,18 @@ export default function HomePage() {
           </div>
         </div>
         <div className={styles.heroRight}>
-          <div className={styles.mapCard}>
-            <iframe src="https://www.google.com/maps/d/embed?mid=1rR-SLG7i71eum5RGpbkV4KpPj0oHJ-I" width="100%" height="320" style={{border:0,borderRadius:"16px",boxShadow:"0 8px 32px rgba(0,0,0,0.12)"}} allowFullScreen loading="lazy"/>
+          <div className={styles.heroVisual}>
+            <div className={styles.statGrid}>
+              <div className={styles.statCard}><div className={styles.statNum}>120+</div><div className={styles.statLabel}>ร้านค้า</div></div>
+              <div className={styles.statCard}><div className={styles.statNum}>8</div><div className={styles.statLabel}>หมวดหมู่</div></div>
+              <div className={styles.statCard}><div className={styles.statNum}>฿0</div><div className={styles.statLabel}>ลงทะเบียน</div></div>
+              <div className={styles.statCard}><div className={styles.statNum}>24/7</div><div className={styles.statLabel}>ออนไลน์</div></div>
+            </div>
+            <div className={styles.mapWrap}>
+              <div className={styles.mapBadge}>🗺 แผนที่บริการเชียงใหม่</div>
+              <iframe src="https://www.google.com/maps/d/embed?mid=1rR-SLG7i71eum5RGpbkV4KpPj0oHJ-I" width="100%" height="220" style={{border:0,borderRadius:"14px"}} allowFullScreen loading="lazy"/>
+            </div>
+            <div className={styles.pawFloat}>🐾 เปิดให้บริการแล้ว!</div>
           </div>
         </div>
       </section>
