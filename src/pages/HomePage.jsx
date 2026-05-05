@@ -37,14 +37,7 @@ export default function HomePage() {
         <div className={styles.heroRight}>
           <div className={styles.mapCard}>
             <div className={styles.mapHeader}><span>🗺 บริการใกล้คุณ</span><div className={styles.mapLocation}>📍 เชียงใหม่</div></div>
-            <div className={styles.mapPlaceholder}>
-              <div className={styles.gridH} style={{top:'33%'}}/><div className={styles.gridH} style={{top:'66%'}}/>
-              <div className={styles.gridV} style={{left:'33%'}}/><div className={styles.gridV} style={{left:'66%'}}/>
-              <div className={`${styles.pin} ${styles.pinBlue}`} style={{top:'22%',left:'28%'}}>🏥</div>
-              <div className={`${styles.pin} ${styles.pinYellow}`} style={{top:'50%',left:'55%'}}>🛁</div>
-              <div className={`${styles.pin} ${styles.pinGreen}`} style={{top:'35%',left:'70%'}}>🏨</div>
-              <div className={styles.mapCount}>5 แห่งใกล้คุณ</div>
-            </div>
+            <iframe src="https://www.google.com/maps/d/embed?mid=1rR-SLG7i71eum5RGpbkV4KpPj0oHJ-I" width="100%" height="280" style={{border:0,borderRadius:"12px"}} allowFullScreen loading="lazy"/>
             <div className={styles.resultGrid}>
               <div className={styles.rc}><div className={styles.rcType}>คลินิก</div><div className={styles.rcName}>หมอแมว นิมมาน</div><div className={styles.rcStars}>★★★★★</div><div className={styles.rcDetail}>0.3 กม.</div></div>
               <div className={styles.rc}><div className={styles.rcType}>ฝากเลี้ยง</div><div className={styles.rcName}>Happy Paws Home</div><div className={styles.rcStars}>★★★★☆</div><div className={styles.rcDetail}>1.2 กม.</div></div>
