@@ -51,7 +51,7 @@ export default function HomePage() {
           <div className={styles.sectionLabel}>หมวดหมู่บริการ</div>
           <h2 className={styles.sectionTitle}>บริการครบ ทุกความต้องการ</h2>
           <div className={styles.catGrid}>
-            {CATEGORIES.map((cat,i)=>(
+            {categories.map((cat,i)=>(
               <div key={cat.id} className={`${styles.catCard} ${i===0?styles.catFeatured:''}`} onClick={()=>navigate(`/search?cat=${cat.id}`)} role="button" tabIndex={0}>
                 <div className={styles.catIcon}>{cat.icon}</div>
                 <div className={styles.catName}>{cat.label}</div>
