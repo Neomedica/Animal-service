@@ -37,8 +37,7 @@ export default function HomePage() {
         </div>
         <div className={styles.heroRight}>
           <div className={styles.mapCard}>
-            <div className={styles.mapLabel}><span>🗺</span> บริการใกล้คุณ <span style={{fontSize:"11px",color:"var(--text-light)"}}>📍 เชียงใหม่</span></div>
-            <iframe src="https://www.google.com/maps/d/embed?mid=1rR-SLG7i71eum5RGpbkV4KpPj0oHJ-I" width="100%" height="280" style={{border:0,borderRadius:"12px"}} allowFullScreen loading="lazy"/>
+            <iframe src="https://www.google.com/maps/d/embed?mid=1rR-SLG7i71eum5RGpbkV4KpPj0oHJ-I" width="100%" height="320" style={{border:0,borderRadius:"16px",boxShadow:"0 8px 32px rgba(0,0,0,0.12)"}} allowFullScreen loading="lazy"/>
           </div>
         </div>
       </section>
