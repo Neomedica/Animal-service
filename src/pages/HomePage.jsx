@@ -37,12 +37,8 @@ export default function HomePage() {
         </div>
         <div className={styles.heroRight}>
           <div className={styles.mapCard}>
-            <div className={styles.mapHeader}><span>🗺 บริการใกล้คุณ</span><div className={styles.mapLocation}>📍 เชียงใหม่</div></div>
+            <div className={styles.mapLabel}><span>🗺</span> บริการใกล้คุณ <span style={{fontSize:"11px",color:"var(--text-light)"}}>📍 เชียงใหม่</span></div>
             <iframe src="https://www.google.com/maps/d/embed?mid=1rR-SLG7i71eum5RGpbkV4KpPj0oHJ-I" width="100%" height="280" style={{border:0,borderRadius:"12px"}} allowFullScreen loading="lazy"/>
-            <div className={styles.resultGrid}>
-              <div className={styles.rc}><div className={styles.rcType}>คลินิก</div><div className={styles.rcName}>หมอแมว นิมมาน</div><div className={styles.rcStars}>★★★★★</div><div className={styles.rcDetail}>0.3 กม.</div></div>
-              <div className={styles.rc}><div className={styles.rcType}>ฝากเลี้ยง</div><div className={styles.rcName}>Happy Paws Home</div><div className={styles.rcStars}>★★★★☆</div><div className={styles.rcDetail}>1.2 กม.</div></div>
-            </div>
           </div>
         </div>
       </section>
