@@ -97,7 +97,7 @@ export default function PawStorePage() {
                     <div style={{fontSize:"12px",color:"var(--text-mid)",lineHeight:"1.5",marginBottom:"8px"}}>{p.description}</div>
                     <div style={{display:"flex",alignItems:"center",justifyContent:"space-between"}}>
                       <div style={{fontSize:"16px",fontWeight:"800",color:"var(--blue-deep)"}}>{p.price}</div>
-                      <button onClick={()=>addToCart(p)} style={{background:"var(--blue-deep)",color:"white",border:"none",borderRadius:"50px",padding:"5px 12px",fontSize:"12px",fontWeight:"700",cursor:"pointer",fontFamily:"var(--font-body)"}}>+ ใส่ตะกร้า</button>
+                      <button onClick={()=>addToCart(p)} style={{background:"var(--blue-deep)",color:"white",border:"none",borderRadius:"50px",padding:"5px 12px",fontSize:"12px",fontWeight:"700",cursor:"pointer",fontFamily:"var(--font-body)"}>{cart.find(i=>i.id===p.id)?.qty>0?`✓ ${cart.find(i=>i.id===p.id).qty} ชิ้น`:"+ ใส่ตะกร้า"}</button>
                     </div>
                   </div>
                 </div>
@@ -123,7 +123,7 @@ export default function PawStorePage() {
                     <div style={{fontSize:"12px",color:"var(--text-mid)",lineHeight:"1.5",marginBottom:"8px"}}>{p.description}</div>
                     <div style={{display:"flex",alignItems:"center",justifyContent:"space-between"}}>
                       <div style={{fontSize:"16px",fontWeight:"800",color:"var(--blue-deep)"}}>{p.price}</div>
-                      <button onClick={()=>addToCart(p)} style={{background:"#5B3FA0",color:"white",border:"none",borderRadius:"50px",padding:"5px 12px",fontSize:"12px",fontWeight:"700",cursor:"pointer",fontFamily:"var(--font-body)"}}>+ ใส่ตะกร้า</button>
+                      <button onClick={()=>addToCart(p)} style={{background:"#5B3FA0",color:"white",border:"none",borderRadius:"50px",padding:"5px 12px",fontSize:"12px",fontWeight:"700",cursor:"pointer",fontFamily:"var(--font-body)"}>{cart.find(i=>i.id===p.id)?.qty>0?`✓ ${cart.find(i=>i.id===p.id).qty} ชิ้น`:"+ ใส่ตะกร้า"}</button>
                     </div>
                   </div>
                 </div>
