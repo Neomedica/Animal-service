@@ -36,9 +36,7 @@ export default function HomePage() {
           </div>
         </div>
         <div className={styles.heroRight}>
-          <iframe src="https://www.google.com/maps/d/embed?mid=1rR-SLG7i71eum5RGpbkV4KpPj0oHJ-I&ehbc=2E312F" width="100%" height="420" style={{border:0,borderRadius:"24px",boxShadow:"0 20px 60px rgba(0,0,0,0.15)"}} allowFullScreen loading="lazy"/>
-        </div>
-            <iframe src="https://www.google.com/maps/d/embed?mid=1rR-SLG7i71eum5RGpbkV4KpPj0oHJ-I" width="100%" height="320" style={{border:0,borderRadius:"20px",boxShadow:"0 16px 48px rgba(0,0,0,0.12)"}} allowFullScreen loading="lazy"/>
+          <iframe src="https://www.google.com/maps/d/embed?mid=1rR-SLG7i71eum5RGpbkV4KpPj0oHJ-I" width="100%" height="380" style={{border:0,borderRadius:"20px",boxShadow:"0 16px 48px rgba(0,0,0,0.15)"}} allowFullScreen loading="lazy"/>
         </div>
       </section>
 
